@@ -1,3 +1,4 @@
+/// <reference types="vite-plugin-svgr/client" />
 import AppBar from "../components/AppBar";
 import InpageNav from "../components/InpageNav";
 import Logo from "../components/Logo/Logo";
@@ -16,7 +17,7 @@ import { useLanguage } from "../components/language-provider";
 import landingPageText from "../constants/landing-page-text.json";
 
 function Landing() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <div className="py-3 px-32 flex-col justify-between font-roboto">
