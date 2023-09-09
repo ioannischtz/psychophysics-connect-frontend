@@ -33,9 +33,11 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
         isStickied ? "border-b border-border" : ""
       } `}
     >
-      <div className="flex  items-center first">{logo}</div>
-      <div className="flex items-center first">{nav}</div>
-      <div className="flex  items-center space-x-4">
+      <div className="flex items-center first">{logo}</div>
+      <div className="flex text-center justify-center items-center first">
+        {nav}
+      </div>
+      <div className="flex items-center space-x-4">
         {settings}
         {actionButton}
       </div>

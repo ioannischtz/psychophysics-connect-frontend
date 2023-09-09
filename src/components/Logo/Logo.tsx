@@ -8,20 +8,20 @@ function Logo() {
     <div
       className={`${
         theme === "dark"
-          ? "light text-foreground bg-background  backdrop-filter backdrop-blur-lg"
+          ? " text-foreground bg-background  backdrop-filter backdrop-blur-lg"
           : ""
       }  py-2 px-4 rounded flex  w-fit items-center space-x-2`}
     >
       <OrigamiBrain
-        width="44"
-        height="44"
+        width="40"
+        height="40"
         strokeWidth="2"
         className="fill-foreground stroke-foreground border-2 border-primary"
       />
-      <div className="h-11">
+      <div className="h-10">
         <Separator orientation="vertical" className="bg-accent w-[4px]" />
       </div>
-      <h2 className="font-robotoSlab text-3xl font-light">
+      <h2 className="scroll-m-20 text-3xl font-robotoSlab font-light tracking-tight transition-colors first:mt-0">
         Psychophysics Connect
       </h2>
     </div>
