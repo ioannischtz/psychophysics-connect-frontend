@@ -1,0 +1,220 @@
+{
+  "navlinks": {
+    "en": [
+      "About",
+      "How it works"
+    ],
+    "gr": [
+      "Σχετικά με",
+      "Πώς λειτουργεί"
+    ]
+  },
+  "action-btn": {
+    "en": "GET STARTED",
+    "gr": "ΞΕΚΙΝΗΣΤΕ"
+  },
+  "title-1": {
+    "en": "About Psychophysics Connect",
+    "gr": "Σχετικά με το Psychophysics Connect"
+  },
+  "about-1": {
+    "h4": {
+      "en": "Empowering Collaboration in Psycho-physical Research",
+      "gr": "Ενδυναμώνοντας τη Συνεργασία στην Ψυχο-φυσική Έρευνα"
+    },
+    "p": {
+      "en": "The Psychophysics Connect project seeks to facilitate psycho-physical research by bridging the gap between researchers and participants. Our innovative web platform is designed to make psycho-physics experiments accessible to researchers and engaging for participants, no matter where they are.",
+      "gr": "Το έργο Psychophysics Connect αποσκοπεί στη διευκόλυνση της ψυχο-φυσικής έρευνας, γεφυρώνοντας το χάσμα μεταξύ ερευνητών και συμμετεχόντων. Η καινοτόμος ιστοσελίδα μας σχεδιάστηκε για να καθιστά τις ψυχο-φυσικές εξετάσεις προσβάσιμες στους ερευνητές και συναρπαστικές για τους συμμετέχοντες, ανεξάρτητα από το πού βρίσκονται."
+    }
+  },
+  "about-2": {
+    "h4": {
+      "en": "Our Motivation",
+      "gr": "Το Κίνητρο μας"
+    },
+    "p": {
+      "en": "The world of psycho-physical research is constantly evolving, and we believe that innovation should be at its core. We’ve seen the challenges researchers face when conducting experiments - from recruiting participants to managing complex sessions. That’s why we’ve created Psychophysics Connect, a platform that simplifies and streamlines the research process.",
+      "gr": "Ο κόσμος της ψυχοσωματικής έρευνας εξελίσσεται συνεχώς, και πιστεύουμε ότι η καινοτομία πρέπει να βρίσκεται στον πυρήνα της. Έχουμε δει τις προκλήσεις που αντιμετωπίζουν οι ερευνητές κατά τη διεξαγωγή πειραμάτων - από την προσέλκυση συμμετεχόντων ως τη διαχείριση πολύπλοκων συνεδριών. Γι' αυτό δημιουργήσαμε το Psychophysics Connect, μια πλατφόρμα που απλοποιεί και επιταχύνει τη διαδικασία έρευνας."
+    }
+  },
+  "about-2-2": {
+    "h4": {
+      "en": "Who we serve",
+      "gr": "Ποιους εξυπηρετούμε"
+    },
+    "p": {
+      "en": "is for two key user groups:",
+      "gr": "απευθύνεται σε δύο κύριες ομάδες χρηστών:"
+    },
+    "li1": {
+      "role": {
+        "en": "Subjects",
+        "gr": "Συμμετέχοντες"
+      },
+      "text": {
+        "en": "Individuals who want to contribute to scientific research. They can easily participate in experiments, providing valuable data to researchers.",
+        "gr": "Άτομα που επιθυμούν να συνεισφέρουν στην επιστημονική έρευνα. Μπορούν εύκολα να συμμετάσχουν σε πειράματα, παρέχοντας σημαντικά δεδομένα στους ερευνητές."
+      }
+    },
+    "li2": {
+      "role": {
+        "en": "Experimenters",
+        "gr": "Ερευνητές"
+      },
+      "text": {
+        "en": "Researchers and scientists who conduct psycho-physics experiments. They can design, manage and analyze experiments efficiently.",
+        "gr": "Ερευνητές και επιστήμονες που διενεργούν ψυχοφυσικά πειράματα. Μπορούν να σχεδιάσουν, διαχειριστούν και αναλύσουν τα πειράματα αποτελεσματικά."
+      }
+    }
+  },
+  "about-3": {
+    "h4": {
+      "en": "Our Vision",
+      "gr": "Το Όραμά μας"
+    },
+    "p": {
+      "en": "Our vision is to empower collaboration between researchers and participants. By providing an intuitive platform, we enable researchers to focus on their studies while offering participants the opportunity to engage in meaningful research.",
+      "gr": "Το όραμά μας είναι να ενισχύσουμε τη συνεργασία μεταξύ ερευνητών και συμμετεχόντων. Παρέχοντας μια διαισθητική πλατφόρμα, επιτρέπουμε στους ερευνητές να επικεντρωθούν στις μελέτες τους, ενώ προσφέρουμε στους συμμετέχοντες την ευκαιρία να συμμετάσχουν σε ουσιαστική έρευνα."
+    }
+  },
+  "title-2": {
+    "en": "How Psychophysics Connect works",
+    "gr": "Πώς λειτουργεί το Psychophysics Connect"
+  },
+  "how-it-works-1": {
+    "h4": {
+      "en": "Seamless Collaboration, Powerful Research",
+      "gr": "Απρόσκοπτη Συνεργασία, Ισχυρή Έρευνα"
+    },
+    "p": {
+      "en": "The Psychophysics Connect platform simplifies the process of designing and conducting psycho-physics experiments. Here’s how it works: ",
+      "gr": "Η πλατφόρμα Psychophysics Connect απλοποιεί τη διαδικασία σχεδιασμού και διεξαγωγής ψυχοφυσικών πειραμάτων. Δείτε πώς λειτουργεί:"
+    }
+  },
+  "how-it-works-2": {
+    "h4": {
+      "en": "For Subjects:",
+      "gr": "Για τους Συμμετέχοντες:"
+    },
+    "p1": {
+      "en": "Explore Available Experiments",
+      "gr": "Εξερευνήστε Διαθέσιμα Πειράματα"
+    },
+    "bullet-list-1": {
+      "li1": {
+        "en": "Visit the homepage to discover a list of active experiments.",
+        "gr": "Επισκεφθείτε την αρχική σελίδα για να ανακαλύψετε μια λίστα ενεργών πειραμάτων."
+      },
+      "li2": {
+        "en": "Choose an experiment that interests you and start your journey as a participant.",
+        "gr": "Επιλέξτε ένα πείραμα που σας ενδιαφέρει και ξεκινήστε το ταξίδι σας ως συμμετέχοντας."
+      }
+    },
+    "p2": {
+      "en": "Manage Your Sessions",
+      "gr": "Διαχειριστείτε τις συνεδρίες σας"
+    },
+    "bullet-list-2": {
+      "li1": {
+        "en": "Access a dashboard where you can view all your experiment sessions",
+        "gr": "Αποκτήστε πρόσβαση σε έναν πίνακα ελέγχου όπου μπορείτε να δείτε όλες τις συνεδρίες των πειραμάτων σας."
+      },
+      "li2": {
+        "en": "Resume incomplete sessions you’ve previously paused, or start new ones for sessions you have already completed.",
+        "gr": "Συνεχίστε τις ημιτελείς συνεδρίες που είχατε προηγουμένως διακόψει ή ξεκινήστε νέες για συνεδρίες που έχετε ήδη ολοκληρώσει."
+      }
+    },
+    "p3": {
+      "en": "Engage in Experiments",
+      "gr": "Συμμετέχετε σε πειράματα"
+    },
+    "bullet-list-3": {
+      "li1": {
+        "en": "Enter the experiment session, where you’ll be presented with various stimuli.",
+        "gr": "Μπείτε στη συνεδρία του πειράματος, όπου θα σας παρουσιαστούν διάφορα ερεθίσματα."
+      },
+      "li2": {
+        "en": "Participate actively, providing valuable responses.",
+        "gr": "Συμμετέχετε ενεργά, παρέχοντας πολύτιμες απαντήσεις."
+      },
+      "li3": {
+        "en": "If you need to pause, you can exit and return later to continue where you left off.",
+        "gr": "Αν χρειαστεί να κάνετε παύση, μπορείτε να βγείτε και να επιστρέψετε αργότερα για να συνεχίσετε από εκεί που σταματήσατε."
+      }
+    }
+  },
+  "how-it-works-3": {
+    "h4": {
+      "en": "For Experimenters:",
+      "gr": "Για τους Ερευνητές:"
+    },
+    "p1": {
+      "en": "Navigate Your Dashboard",
+      "gr": "Πλοηγηθείτε στον Πίνακα Ελέγχου σας"
+    },
+    "bullet-list-1": {
+      "li1": {
+        "en": "Access your dedicated dashboard, where you can manage your experiments",
+        "gr": "Αποκτήστε πρόσβαση στον ειδικό πίνακα ελέγχου σας, όπου μπορείτε να διαχειρίζεστε τα πειράματά σας."
+      }
+    },
+    "p2": {
+      "en": "Create new experiments",
+      "gr": "Δημιουργήστε νέα πειράματα"
+    },
+    "bullet-list-2": {
+      "li1": {
+        "en": "Start crafting a new experiment.",
+        "gr": "Ξεκινήστε τη δημιουργία ενός νέου πειράματος."
+      },
+      "li2": {
+        "en": "Set the title, description, add stimuli, perceptual dimensions and more, to design unique experiments.",
+        "gr": "Ορίστε τον τίτλο, την περιγραφή, προσθέστε ερεθίσματα, αντιληπτικές διαστάσεις και περισσότερα, για να σχεδιάσετε μοναδικά πειράματα."
+      }
+    },
+    "p3": {
+      "en": "Manage Experiments",
+      "gr": "Διαχειριστείτε Πειράματα"
+    },
+    "bullet-list-3": {
+      "li1": {
+        "en": "Easily edit or delete existing experiments as needed.",
+        "gr": "Επεξεργαστείτε ή διαγράψτε υφιστάμενα πειράματα εύκολα, ανάλογα με τις ανάγκες."
+      },
+      "li2": {
+        "en": "Keep track of responses and data from participants",
+        "gr": "Παρακολουθήστε τις απαντήσεις και τα δεδομένα από τους συμμετέχοντες."
+      }
+    },
+    "p4": {
+      "en": "Enhance Your Resources",
+      "gr": "Ενισχύστε τους Πόρους σας"
+    },
+    "bullet-list-4": {
+      "li1": {
+        "en": "Upload media assets to enrich your experiments.",
+        "gr": "Μεταφορτώστε πολυμέσα για να εμπλουτίσετε τα πειράματά σας."
+      }
+    }
+  },
+  "how-it-works-4": {
+    "h4": {
+      "en": "Collaborative Research Made Easy",
+      "gr": "Η Συνεργατική Έρευνα γίνεται εύκολη"
+    },
+    "p": {
+      "en": "Psychophysics Connect is designed to simplify the research process, enabling seamless collaboration between researchers and participants. Whether you’re an experimenter seeking insights or a subject eager to contribute, our platform empowers you to be part of groundbreaking research.",
+      "gr": "Το Psychophysics Connect σχεδιάστηκε για να απλοποιήσει την ερευνητική διαδικασία, επιτρέποντας την απρόσκοπτη συνεργασία μεταξύ ερευνητών και συμμετεχόντων. Είτε είστε ερευνητής που αναζητά νέες γνώσεις, είτε υποκείμενο που επιθυμεί να συνησφέρει, η πλατφόρμα μας σας ενδυναμώνει να γίνετε μέρος σε πρωτοποριακές έρευνες."
+    }
+  },
+  "how-it-works-4-2": {
+    "h4": {
+      "en": "Ready to Get Started?",
+      "gr": "Έτοιμοι να ξεκινήσετε;"
+    },
+    "p": {
+      "en": "Join Psychophysics Connect today and be part of a community dedicated to advancing psycho-physical research. Let’s make science accessible and engaging for everyone.",
+      "gr": "Συμμετέχετε στο Psychophysics Connect σήμερα και γίνετε μέρος μιας κοινότητας αφιερωμένης στην προώθηση της ψυχο-φυσικής έρευνας. Ας κάνουμε την επιστήμη προσβάσιμη και ενδιαφέρουσα για όλους."
+    }
+  }
+}
