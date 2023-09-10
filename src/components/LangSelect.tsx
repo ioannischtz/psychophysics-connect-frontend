@@ -11,9 +11,10 @@ import {
 function LangSelect() {
   const { language, setLanguage } = useLanguage();
 
-  const toggleLanguage = () => {
-    const newLang = language === "EN" ? "GR" : "EN";
-    setLanguage(newLang);
+  const toggleLanguage = (newLang: "EN" | "GR") => {
+    if (newLang !== language) {
+      setLanguage(newLang);
+    }
   };
 
   return (
