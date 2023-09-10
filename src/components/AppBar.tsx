@@ -58,7 +58,7 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
             <MenuIcon />
           </Toggle>
         </DialogTrigger>
-        <DialogContent className="min-h-screen sm:max-w-[425px]">
+        <DialogContent className="min-h-[calc(100vh-2rem)] sm:max-w-[425px]">
           <DialogHeader>
             <div className="flex items-center space-x-4 h-fit">{settings}</div>
           </DialogHeader>

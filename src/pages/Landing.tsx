@@ -64,7 +64,7 @@ function Landing() {
           </Button>
         }
       />
-      <main className="my-12 md:my-32 flex flex-col justify-between space-y-24 font-roboto">
+      <main className="my-12 md:my-32 flex flex-col justify-between space-y-24 font-roboto w-full">
         <section id="about" className="scroll-smooth scroll-mt-32">
           <H1 className="mb-16 text-center">
             {language === "EN"
@@ -73,7 +73,7 @@ function Landing() {
           </H1>
           <div
             id="about-content"
-            className="px-4 md:px-0 md:ml-60 space-y-8 font-robotoSlab"
+            className="px-4 md:pl-60 space-y-8 font-robotoSlab"
           >
             <div id="about-1">
               <div className="grid grid-cols-6 row-span-1">
@@ -140,7 +140,7 @@ function Landing() {
                     </li>
                   </BulletList>
                 </div>
-                <SharedGoalsSVG className="col-start-1 md:col-start-5 col-span-2 row-start-1 md:row-start-1 row-span-1 md:row-span-3 w-fit" />
+                <SharedGoalsSVG className="col-start-1 md:col-start-5 col-span-2 row-start-1 md:row-start-1 row-span-1 md:row-span-3 w-fit max-w-full" />
               </div>
             </div>
             <div id="about-3" className="text-right">
@@ -273,7 +273,7 @@ function Landing() {
                     </li>
                   </BulletList>
                 </div>
-                <OnboardingSVG className="col-start-5 md:col-start-5 col-span-2 md:col-span-2 row-start-1 md:row-start-1 row-span-2 md:row-span-3 w-fit" />
+                <OnboardingSVG className="col-start-5 md:col-start-5 col-span-2 md:col-span-2 row-start-1 md:row-start-1 row-span-2 md:row-span-3 w-fit max-w-full" />
               </div>
             </div>
             <div id="how-it-works-3" className="text-right">
@@ -363,7 +363,7 @@ function Landing() {
                     </li>
                   </BulletList>
                 </div>
-                <ScientistSVG className="col-start-1 col-span-2 row-start-1 md:row-start-1 row-span-2 md:row-span-4 w-fit" />
+                <ScientistSVG className="col-start-1 col-span-2 row-start-1 md:row-start-1 row-span-2 md:row-span-4 w-fit max-w-full" />
               </div>
             </div>
             <div id="how-it-works-4" className="text-left space-y-4">
