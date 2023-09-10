@@ -9,7 +9,7 @@ function InpageNav({ links }: { links: { href: string; text: string }[] }) {
   };
 
   return (
-    <nav className="space-x-4 font-roboto text-lg">
+    <nav className="flex flex-col space-y-10 md:space-y-0 items-center font-roboto text-lg md:block  md:space-x-4">
       {links.map((link) => (
         <a
           href={link.href}
@@ -17,7 +17,7 @@ function InpageNav({ links }: { links: { href: string; text: string }[] }) {
             activeLink === link.href
               ? "font-bold underline"
               : "focus:font-bold focus:underline"
-          }`}
+          } text-2xl md:text-lg`}
           key={link.href}
           onClick={() => handleClick(link.href)}
         >
