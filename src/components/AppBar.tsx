@@ -38,8 +38,10 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
 
   return (
     <header
-      className={`max-w-screen-2xl flex justify-between items-center px-2 py-4 w-full sticky top-0 z-10 bg-background/70 backdrop-filter backdrop-blur-lg  firefox:bg-opacity-70 ${
-        isStickied ? "border-b border-border" : ""
+      className={`flex justify-between items-center px-2 py-4 w-full sticky top-0 z-10 bg-background/70 backdrop-filter backdrop-blur-lg  firefox:bg-opacity-70 ${
+        isStickied
+          ? "border-b border-border md:fixed md:w-screen md:-ml-32 md:px-32"
+          : ""
       } `}
     >
       <div className="flex items-center first">{logo}</div>
