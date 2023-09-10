@@ -22,7 +22,7 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
 
   useEffect(() => {
     const handleScroll = debounce(() => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 20) {
         setIsStickied(true);
       } else {
         setIsStickied(false);
