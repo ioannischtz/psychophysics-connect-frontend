@@ -12,8 +12,9 @@ import {
 } from "./ui/Form";
 import { Input } from "./ui/Input";
 import { ButtonGroup, ButtonGroupItem } from "./ButtonGroup";
-import { Separator } from "./ui/Separator";
 import { Button } from "./ui/Button";
+import { useLanguage } from "./language-provider";
+import signupPageText from "../constants/signup-page-text.json";
 
 const signupFormSchema = z.object({
   username: z.string().min(2, {
@@ -27,6 +28,8 @@ const signupFormSchema = z.object({
 });
 
 function SignupForm() {
+  const { language } = useLanguage();
+
   const form = useForm<z.infer<typeof signupFormSchema>>({
     resolver: zodResolver(signupFormSchema),
     defaultValues: {
@@ -51,12 +54,18 @@ function SignupForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>
+                {language === "EN"
+                  ? signupPageText.form.username.label.en
+                  : signupPageText.form.username.label.gr}
+              </FormLabel>
               <FormControl>
-                <Input placeholder="username" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display username.
+                {language === "EN"
+                  ? signupPageText.form.username.description.en
+                  : signupPageText.form.username.description.gr}
               </FormDescription>
             </FormItem>
           )}
@@ -66,9 +75,18 @@ function SignupForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>
+                {language === "EN"
+                  ? signupPageText.form.email.label.en
+                  : signupPageText.form.email.label.gr}
+              </FormLabel>
               <FormControl>
-                <Input placeholder="email" {...field} />
+                <Input
+                  placeholder={language === "EN"
+                    ? signupPageText.form.email.placeholder.en
+                    : signupPageText.form.email.placeholder.gr}
+                  {...field}
+                />
               </FormControl>
             </FormItem>
           )}
@@ -78,9 +96,13 @@ function SignupForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>
+                {language === "EN"
+                  ? signupPageText.form.password.label.en
+                  : signupPageText.form.password.label.gr}
+              </FormLabel>
               <FormControl>
-                <Input placeholder="password" {...field} />
+                <Input {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -90,7 +112,11 @@ function SignupForm() {
           name="role"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-bold pr-1">Select Role:</FormLabel>
+              <FormLabel className="font-bold pr-1">
+                {language === "EN"
+                  ? signupPageText.form.role.label.en
+                  : signupPageText.form.role.label.gr}
+              </FormLabel>
               <FormControl>
                 <ButtonGroup
                   defaultValue={field.value}
@@ -99,28 +125,36 @@ function SignupForm() {
                 >
                   <FormItem>
                     <FormControl>
-                      <ButtonGroupItem value="subject">Subject</ButtonGroupItem>
+                      <ButtonGroupItem value="subject">
+                        {language === "EN"
+                          ? signupPageText.form.role.subject.en
+                          : signupPageText.form.role.subject.gr}
+                      </ButtonGroupItem>
                     </FormControl>
                   </FormItem>
-                  <Separator orientation="vertical" />
                   <FormItem>
                     <FormControl>
                       <ButtonGroupItem value="experimenter">
-                        Experimenter
+                        {language === "EN"
+                          ? signupPageText.form.role.experimenter.en
+                          : signupPageText.form.role.experimenter.gr}
                       </ButtonGroupItem>
                     </FormControl>
                   </FormItem>
                 </ButtonGroup>
               </FormControl>
               <FormDescription>
-                Help researchers by participating in their experiments as a
-                subject.
+                {language === "EN"
+                  ? signupPageText.form.role.description.en
+                  : signupPageText.form.role.description.gr}
               </FormDescription>
             </FormItem>
           )}
         />
         <Button type="submit" variant="success" size="xl" className="w-full">
-          SUBMIT
+          {language === "EN"
+            ? signupPageText.form.submit.en
+            : signupPageText.form.submit.gr}
         </Button>
       </form>
     </Form>
