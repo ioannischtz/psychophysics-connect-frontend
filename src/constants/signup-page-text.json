@@ -51,6 +51,14 @@
     "submit": {
       "en": "SUBMIT",
       "gr": "ΥΠΟΒΟΛΗ"
+    },
+    "prompt": {
+      "en": "Already have an account?",
+      "gr": "Έχετε ήδη λογαριασμό;"
+    },
+    "prompt-action": {
+      "en": "Log in",
+      "gr": "Συνδεθείτε"
     }
   }
 }

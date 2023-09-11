@@ -1,0 +1,20 @@
+{
+  "title": {
+    "en": "Welcome Back!",
+    "gr": "Καλώς ήρθατε πίσω!"
+  },
+  "form": {
+    "sumbit-text": {
+      "en": "LOGIN",
+      "gr": "ΣΥΝΔΕΣΗ"
+    },
+    "prompt": {
+      "en": "Don't have an account yet?",
+      "gr": "Δεν έχετε ακόμα λογαριασμό;"
+    },
+    "prompt-action": {
+      "en": "Sign up",
+      "gr": "Εγγραφείτε"
+    }
+  }
+}
