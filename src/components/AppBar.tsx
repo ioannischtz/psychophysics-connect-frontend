@@ -22,7 +22,7 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
 
   useEffect(() => {
     const handleScroll = debounce(() => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 20) {
         setIsStickied(true);
       } else {
         setIsStickied(false);
@@ -60,9 +60,11 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
             <MenuIcon />
           </Toggle>
         </DialogTrigger>
-        <DialogContent className="min-h-[calc(100vh-2rem)] sm:max-w-[425px]">
+        <DialogContent className="sm:min-h-[calc(100vh-2rem)] sm:max-w-[425px]">
           <DialogHeader>
-            <div className="flex items-center space-x-4 h-fit">{settings}</div>
+            <div className="flex items-center space-x-4 h-fit py-4">
+              {settings}
+            </div>
           </DialogHeader>
           <DialogClose className="">{nav}</DialogClose>
         </DialogContent>
