@@ -28,6 +28,7 @@ const router = createBrowserRouter(
       <Route path="/auth/login" element={<Login />} />
     </Route>,
   ),
+  { basename: import.meta.env.DEV ? "/" : "/psychophysics-connect-frontend/" },
 );
 
 function App() {
