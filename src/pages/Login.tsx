@@ -2,11 +2,12 @@ import AppBar from "../components/AppBar";
 import LangSelect from "../components/LangSelect";
 import Logo from "../components/Logo/Logo";
 import ThemeSwitch from "../components/ThemeSwitch";
-import { useLanguage } from "../components/language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import H1 from "../components/typography/H1";
 import loginPageText from "../constants/login-page-text.json";
 import { ReactComponent as LoginSVG } from "../assets/undraw_login_re_4vu2.svg";
 import LoginForm from "../components/LoginForm";
+import { Link } from "react-router-dom";
 
 function Login() {
   const { language } = useLanguage();
@@ -14,7 +15,11 @@ function Login() {
   return (
     <div className="py-1 px-2 md:py-3 md:px-64 md:min-h-screen flex-col items-center justify-between font-roboto">
       <AppBar
-        logo={<Logo />}
+        logo={
+          <Link to="/">
+            <Logo />
+          </Link>
+        }
         settings={
           <>
             <LangSelect />

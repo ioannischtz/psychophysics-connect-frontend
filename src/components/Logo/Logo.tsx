@@ -1,4 +1,4 @@
-import { useTheme } from "../theme-provider";
+import { useTheme } from "../../contexts/theme-provider";
 import { Separator } from "../ui/Separator";
 import OrigamiBrain from "./OrigamiBrain";
 

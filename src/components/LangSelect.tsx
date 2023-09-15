@@ -1,4 +1,4 @@
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import {
   Select,
   SelectContent,

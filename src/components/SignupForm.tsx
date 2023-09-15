@@ -13,9 +13,10 @@ import {
 import { Input } from "./ui/Input";
 import { ButtonGroup, ButtonGroupItem } from "./ButtonGroup";
 import { Button } from "./ui/Button";
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import signupPageText from "../constants/signup-page-text.json";
 import Muted from "./typography/Muted";
+import { Link } from "react-router-dom";
 
 const signupFormSchema = z.object({
   username: z.string().min(2, {
@@ -167,11 +168,11 @@ function SignupForm() {
             : signupPageText.form["prompt"].gr}
         </Muted>
         <Button variant="link" size="sm">
-          <a className="text-sm font-bold text-success">
+          <Link to="/auth/login" className="text-sm font-bold text-success">
             {language === "EN"
               ? signupPageText.form["prompt-action"].en
               : signupPageText.form["prompt-action"].gr}
-          </a>
+          </Link>
         </Button>
       </div>
     </>

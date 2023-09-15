@@ -7,8 +7,9 @@ import ThemeSwitch from "../components/ThemeSwitch";
 import { ReactComponent as SignupSVG } from "../assets/undraw_sign_up_n6im(1).svg";
 import SignupForm from "../components/SignupForm";
 import H1 from "../components/typography/H1";
-import { useLanguage } from "../components/language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import signupPageText from "../constants/signup-page-text.json";
+import { Link } from "react-router-dom";
 
 function Signup() {
   const { language } = useLanguage();
@@ -16,7 +17,11 @@ function Signup() {
   return (
     <div className="py-1 px-2 md:py-3 md:px-64 md:min-h-screen flex-col items-center justify-between font-roboto">
       <AppBar
-        logo={<Logo />}
+        logo={
+          <Link to="/">
+            <Logo />
+          </Link>
+        }
         settings={
           <>
             <LangSelect />

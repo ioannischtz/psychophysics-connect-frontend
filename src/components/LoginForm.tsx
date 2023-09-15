@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/Form";
 import { Input } from "./ui/Input";
 
@@ -9,6 +9,7 @@ import loginPageText from "../constants/login-page-text.json";
 import signupPageText from "../constants/signup-page-text.json";
 import { Button } from "./ui/Button";
 import Muted from "./typography/Muted";
+import { Link } from "react-router-dom";
 
 const loginFormSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -89,11 +90,11 @@ function LoginForm() {
             : loginPageText.form["prompt"].gr}
         </Muted>
         <Button variant="link" size="sm">
-          <a className="text-sm font-bold text-success">
+          <Link to="/auth/signup" className="text-sm font-bold text-success">
             {language === "EN"
               ? loginPageText.form["prompt-action"].en
               : loginPageText.form["prompt-action"].gr}
-          </a>
+          </Link>
         </Button>
       </div>
     </>
