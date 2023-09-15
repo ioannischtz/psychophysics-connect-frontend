@@ -18,6 +18,7 @@ function InpageNav({ links }: { links: { href: string; text: string }[] }) {
             ? "font-bold underline text-2xl md:text-lg"
             : "focus:font-bold focus:underline text-2xl md:text-lg"}
           key={link.href}
+          onClick={() => handleClick(link.href)}
         >
           {link.text}
         </Link>
