@@ -1,16 +1,37 @@
 import "./App.css";
-import { LanguageProvider } from "./components/language-provider";
-import { ThemeProvider } from "./components/theme-provider";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import { LanguageProvider } from "./contexts/language-provider";
+import { ThemeProvider } from "./contexts/theme-provider";
 import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      element={
+        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+          <LanguageProvider defaultLanguage="EN" storageKey="app-language">
+            <Outlet />
+          </LanguageProvider>
+        </ThemeProvider>
+      }
+    >
+      <Route path="/" element={<Landing />} />
+      <Route path="/auth/signup" element={<Signup />} />
+      <Route path="/auth/login" element={<Login />} />
+    </Route>,
+  ),
+);
 
 function App() {
-  return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <LanguageProvider defaultLanguage="EN" storageKey="app-language">
-        <Landing />
-      </LanguageProvider>
-    </ThemeProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

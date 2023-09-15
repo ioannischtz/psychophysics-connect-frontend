@@ -13,11 +13,14 @@ import { ReactComponent as SharedGoalsSVG } from "../assets/undraw_shared_goals_
 import { ReactComponent as OnboardingSVG } from "../assets/undraw_onboarding_re_6osc.svg";
 import { ReactComponent as ScientistSVG } from "../assets/undraw_scientist_ft0o(1).svg";
 import BulletList from "../components/typography/BulletList";
-import { useLanguage } from "../components/language-provider";
+import { useLanguage } from "../contexts/language-provider";
 import landingPageText from "../constants/landing-page-text.json";
+import { useScrollToHash } from "../hooks/useScrollToHash";
+import { Link } from "react-router-dom";
 
 function Landing() {
   const { language } = useLanguage();
+  useScrollToHash();
 
   return (
     <div className="py-1 px-1 md:py-3 md:px-32 flex-col justify-between font-roboto">
@@ -58,14 +61,16 @@ function Landing() {
             variant="outline"
             className="text-base text-success border-2 border-success hover:bg-success hover:text-success-foreground"
           >
-            {language === "EN"
-              ? landingPageText["action-btn"].en
-              : landingPageText["action-btn"].gr}
+            <Link to="/auth/signup">
+              {language === "EN"
+                ? landingPageText["action-btn"].en
+                : landingPageText["action-btn"].gr}
+            </Link>
           </Button>
         }
       />
       <main className="my-12 md:my-32 flex flex-col justify-between space-y-24 font-roboto w-full">
-        <section id="about" className="scroll-smooth scroll-mt-32">
+        <section id="about" className="scroll-mt-28">
           <H1 className="mb-16 text-center">
             {language === "EN"
               ? landingPageText["title-1"].en
@@ -162,7 +167,7 @@ function Landing() {
           </div>
         </section>
 
-        <section id="how-it-works" className="scroll-smooth scroll-mt-32">
+        <section id="how-it-works" className="scroll-mt-28">
           <H1 className="mb-16 text-center">
             {language === "EN"
               ? landingPageText["title-2"].en
@@ -400,9 +405,11 @@ function Landing() {
                   size="xl"
                   className="col-span-6 md:col-span-1 col-start-1 md:col-start-5 row-start-2 md:row-start-2 my-16 md:my-8"
                 >
-                  {language === "EN"
-                    ? landingPageText["action-btn"].en
-                    : landingPageText["action-btn"].gr}
+                  <Link to="/auth/signup">
+                    {language === "EN"
+                      ? landingPageText["action-btn"].en
+                      : landingPageText["action-btn"].gr}
+                  </Link>
                 </Button>
               </div>
             </div>

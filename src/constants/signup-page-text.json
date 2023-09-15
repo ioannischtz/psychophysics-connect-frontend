@@ -1,0 +1,64 @@
+{
+  "title": {
+    "en": "Sign Up",
+    "gr": "Εγγραφή"
+  },
+  "form": {
+    "username": {
+      "label": {
+        "en": "Username",
+        "gr": "Όνομα χρήστη"
+      },
+      "description": {
+        "en": "This is your public display username.",
+        "gr": "Αυτό είναι το δημόσιο όνομα χρήστη σας."
+      }
+    },
+    "email": {
+      "label": {
+        "en": "Email",
+        "gr": "Ηλεκτρονικό Ταχυδρομείο"
+      },
+      "placeholder": {
+        "en": "example@address.com",
+        "gr": "example@address.com"
+      }
+    },
+    "password": {
+      "label": {
+        "en": "Password",
+        "gr": "Κωδικός πρόσβασης"
+      }
+    },
+    "role": {
+      "label": {
+        "en": "Select Role:",
+        "gr": "Επιλέξτε ρόλο:"
+      },
+      "subject": {
+        "en": "Subject",
+        "gr": "Συμμετέχον"
+      },
+      "experimenter": {
+        "en": "Experimenter",
+        "gr": "Ερευνητής"
+      },
+      "description": {
+        "en": "Help researchers by participating in their experiments as a subject.",
+        "gr": "Βοηθήστε τους ερευνητές συμμετέχοντας στα πειράματά τους ως υποκείμενο."
+      }
+    },
+    "submit": {
+      "en": "SUBMIT",
+      "gr": "ΥΠΟΒΟΛΗ"
+    },
+    "prompt": {
+      "en": "Already have an account?",
+      "gr": "Έχετε ήδη λογαριασμό;"
+    },
+    "prompt-action": {
+      "en": "Log in",
+      "gr": "Συνδεθείτε"
+    }
+  }
+}
