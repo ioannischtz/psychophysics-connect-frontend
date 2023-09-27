@@ -1,4 +1,4 @@
-import { useLanguage } from "../contexts/language-provider";
+import { useLanguage } from "../../../lib/contexts/language-provider";
 import {
   Select,
   SelectContent,
@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/Select";
+} from "../../ui/form/Select";
 
 function LangSelect() {
   const { language, setLanguage } = useLanguage();

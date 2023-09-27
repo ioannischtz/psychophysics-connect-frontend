@@ -9,14 +9,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "./ui/Form";
-import { Input } from "./ui/Input";
-import { ButtonGroup, ButtonGroupItem } from "./ButtonGroup";
-import { Button } from "./ui/Button";
-import { useLanguage } from "../contexts/language-provider";
-import signupPageText from "../constants/signup-page-text.json";
-import Muted from "./typography/Muted";
-import { Link } from "react-router-dom";
+} from "../../ui/form/Form";
+import { Input } from "../../ui/form/Input";
+import { ButtonGroup, ButtonGroupItem } from "../../ui/form/ButtonGroup";
+import { Button } from "../../ui/form/Button";
+import { useLanguage } from "../../../lib/contexts/language-provider";
+import signupPageText from "../../../constants/signup-page-text.json";
+import Muted from "../../ui/typography/Muted";
+import { Link, useSubmit } from "react-router-dom";
 
 const signupFormSchema = z.object({
   username: z.string().min(2, {
@@ -31,6 +31,7 @@ const signupFormSchema = z.object({
 
 function SignupForm() {
   const { language } = useLanguage();
+  const submit = useSubmit();
 
   const form = useForm<z.infer<typeof signupFormSchema>>({
     resolver: zodResolver(signupFormSchema),
@@ -45,7 +46,7 @@ function SignupForm() {
   function onSubmit(values: z.infer<typeof signupFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    submit(values, { method: "post" });
   }
 
   return (

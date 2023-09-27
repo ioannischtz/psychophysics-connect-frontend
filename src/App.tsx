@@ -6,11 +6,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { LanguageProvider } from "./contexts/language-provider";
-import { ThemeProvider } from "./contexts/theme-provider";
+import { LanguageProvider } from "./lib/contexts/language-provider";
+import { ThemeProvider } from "./lib/contexts/theme-provider";
 import Landing from "./pages/Landing";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Login, { action as loginAction } from "./pages/Login";
+import Signup, { action as signupAction } from "./pages/Signup";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,8 +26,10 @@ const router = createBrowserRouter(
       }
     >
       <Route path="/" element={<Landing />} />
-      <Route path="/auth/signup" element={<Signup />} />
-      <Route path="/auth/login" element={<Login />} />
+      <Route path="/auth/signup" element={<Signup />} action={signupAction} />
+      <Route path="/auth/login" element={<Login />} action={loginAction} />
+      <Route path="/subject-homepage" element={<Home />} />
+      <Route path="/experimenter-dashboard" element={<Dashboard />} />
     </Route>,
   ),
   { basename: import.meta.env.DEV ? "/" : "/psychophysics-connect-frontend/" },

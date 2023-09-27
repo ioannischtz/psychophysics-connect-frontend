@@ -1,15 +1,21 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useLanguage } from "../contexts/language-provider";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/Form";
-import { Input } from "./ui/Input";
+import { useLanguage } from "../../../lib/contexts/language-provider";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "../../ui/form/Form";
+import { Input } from "../../ui/form/Input";
 
-import loginPageText from "../constants/login-page-text.json";
-import signupPageText from "../constants/signup-page-text.json";
-import { Button } from "./ui/Button";
-import Muted from "./typography/Muted";
-import { Link } from "react-router-dom";
+import loginPageText from "../../../constants/login-page-text.json";
+import signupPageText from "../../../constants/signup-page-text.json";
+import { Button } from "../../ui/form/Button";
+import Muted from "../../ui/typography/Muted";
+import { Link, useSubmit } from "react-router-dom";
 
 const loginFormSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -20,6 +26,7 @@ const loginFormSchema = z.object({
 
 function LoginForm() {
   const { language } = useLanguage();
+  const submit = useSubmit();
 
   const form = useForm<z.infer<typeof loginFormSchema>>({
     resolver: zodResolver(loginFormSchema),
@@ -32,7 +39,8 @@ function LoginForm() {
   function onSubmit(values: z.infer<typeof loginFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+
+    submit(values, { method: "post" });
   }
 
   return (

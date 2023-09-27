@@ -1,21 +1,21 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppBar from "../components/AppBar";
-import InpageNav from "../components/InpageNav";
-import Logo from "../components/Logo/Logo";
-import ThemeSwitch from "../components/ThemeSwitch";
-import { Button } from "../components/ui/Button";
-import LangSelect from "../components/LangSelect";
-import H1 from "../components/typography/H1";
-import H4 from "../components/typography/H4";
-import P from "../components/typography/P";
+import AppBar from "../components/ui/navigation/AppBar";
+import InpageNav from "../components/features/InpageNav/InpageNav";
+import Logo from "../components/features/Logo/Logo";
+import ThemeSwitch from "../components/features/ThemeSwitch/ThemeSwitch";
+import { Button } from "../components/ui/form/Button";
+import LangSelect from "../components/features/LangSelect/LangSelect";
+import H1 from "../components/ui/typography/H1";
+import H4 from "../components/ui/typography/H4";
+import P from "../components/ui/typography/P";
 
 import { ReactComponent as SharedGoalsSVG } from "../assets/undraw_shared_goals_re_jvqd.svg";
 import { ReactComponent as OnboardingSVG } from "../assets/undraw_onboarding_re_6osc.svg";
 import { ReactComponent as ScientistSVG } from "../assets/undraw_scientist_ft0o(1).svg";
-import BulletList from "../components/typography/BulletList";
-import { useLanguage } from "../contexts/language-provider";
+import BulletList from "../components/ui/typography/BulletList";
+import { useLanguage } from "../lib/contexts/language-provider";
 import landingPageText from "../constants/landing-page-text.json";
-import { useScrollToHash } from "../hooks/useScrollToHash";
+import { useScrollToHash } from "../lib/hooks/useScrollToHash";
 import { Link } from "react-router-dom";
 
 function Landing() {

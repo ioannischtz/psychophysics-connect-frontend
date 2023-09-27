@@ -1,13 +1,14 @@
-import AppBar from "../components/AppBar";
-import LangSelect from "../components/LangSelect";
-import Logo from "../components/Logo/Logo";
-import ThemeSwitch from "../components/ThemeSwitch";
-import { useLanguage } from "../contexts/language-provider";
-import H1 from "../components/typography/H1";
+/// <reference types="vite-plugin-svgr/client" />
+import AppBar from "../components/ui/navigation/AppBar";
+import LangSelect from "../components/features/LangSelect/LangSelect";
+import Logo from "../components/features/Logo/Logo";
+import ThemeSwitch from "../components/features/ThemeSwitch/ThemeSwitch";
+import { useLanguage } from "../lib/contexts/language-provider";
+import H1 from "../components/ui/typography/H1";
 import loginPageText from "../constants/login-page-text.json";
 import { ReactComponent as LoginSVG } from "../assets/undraw_login_re_4vu2.svg";
-import LoginForm from "../components/LoginForm";
-import { Link } from "react-router-dom";
+import LoginForm from "../components/features/LoginForm/LoginForm";
+import { ActionFunctionArgs, Link, redirect } from "react-router-dom";
 
 function Login() {
   const { language } = useLanguage();
@@ -51,5 +52,28 @@ function Login() {
     </div>
   );
 }
+
+export const action = async ({ request }: ActionFunctionArgs) => {
+  console.log("login action called!");
+  const formData = await request.formData();
+  console.log("formData = ", formData);
+
+  const response = await fetch("http://localhost:8000/api/users/login", {
+    method: "POST",
+    body: formData,
+    credentials: "same-origin",
+  });
+
+  if (response.ok) {
+    const user = await response.json();
+    if (user.userData.role === "subject") {
+      return redirect("/subject-homepage");
+    }
+    if (user.userData.role === "experimenter") {
+      return redirect("/experimenter-dashboard");
+    }
+  }
+  return null;
+};
 
 export default Login;

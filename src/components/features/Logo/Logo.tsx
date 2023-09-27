@@ -1,5 +1,5 @@
-import { useTheme } from "../../contexts/theme-provider";
-import { Separator } from "../ui/Separator";
+import { useTheme } from "../../../lib/contexts/theme-provider";
+import { Separator } from "../../ui/data_display/Separator";
 import OrigamiBrain from "./OrigamiBrain";
 
 function Logo() {

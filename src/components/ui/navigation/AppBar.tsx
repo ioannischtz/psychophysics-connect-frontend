@@ -1,12 +1,12 @@
 import { ReactNode, useEffect, useState } from "react";
-import { Toggle } from "./ui/Toggle";
+import { Toggle } from "../form/Toggle";
 import { MenuIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTrigger,
-} from "./ui/Dialog";
+} from "../overlays/Dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
 
 interface AppBarProps {

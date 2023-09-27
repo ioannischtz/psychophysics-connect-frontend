@@ -1,15 +1,15 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppBar from "../components/AppBar";
-import LangSelect from "../components/LangSelect";
-import Logo from "../components/Logo/Logo";
-import ThemeSwitch from "../components/ThemeSwitch";
+import AppBar from "../components/ui/navigation/AppBar";
+import LangSelect from "../components/features/LangSelect/LangSelect";
+import Logo from "../components/features/Logo/Logo";
+import ThemeSwitch from "../components/features/ThemeSwitch/ThemeSwitch";
 
 import { ReactComponent as SignupSVG } from "../assets/undraw_sign_up_n6im(1).svg";
-import SignupForm from "../components/SignupForm";
-import H1 from "../components/typography/H1";
-import { useLanguage } from "../contexts/language-provider";
+import SignupForm from "../components/features/SignupForm/SignupForm";
+import H1 from "../components/ui/typography/H1";
+import { useLanguage } from "../lib/contexts/language-provider";
 import signupPageText from "../constants/signup-page-text.json";
-import { Link } from "react-router-dom";
+import { ActionFunctionArgs, Link, redirect } from "react-router-dom";
 
 function Signup() {
   const { language } = useLanguage();
@@ -53,5 +53,28 @@ function Signup() {
     </div>
   );
 }
+
+export const action = async ({ request }: ActionFunctionArgs) => {
+  console.log("signup action called!");
+  const formData = await request.formData();
+  const role = formData.get("role");
+  console.log("formData = ", formData);
+  console.log("role = ", role);
+
+  const response = await fetch("http://127.0.0.1:8000/api/users/signup", {
+    method: "POST",
+    body: formData,
+  });
+
+  if (response.ok) {
+    if (role === "subject") {
+      return redirect("/subject-homepage");
+    }
+    if (role === "experimenter") {
+      return redirect("/experimenter-dashboard");
+    }
+  }
+  return null;
+};
 
 export default Signup;
