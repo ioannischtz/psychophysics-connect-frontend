@@ -13,7 +13,7 @@ import { Input } from "../../ui/form/Input";
 
 import loginPageText from "../../../constants/login-page-text.json";
 import signupPageText from "../../../constants/signup-page-text.json";
-import { Button } from "../../ui/form/Button";
+import { Button } from "../../ui/form/Button/Button";
 import Muted from "../../ui/typography/Muted";
 import { Link, useSubmit } from "react-router-dom";
 

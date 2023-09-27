@@ -3,7 +3,7 @@ import AppBar from "../components/ui/navigation/AppBar";
 import InpageNav from "../components/features/InpageNav/InpageNav";
 import Logo from "../components/features/Logo/Logo";
 import ThemeSwitch from "../components/features/ThemeSwitch/ThemeSwitch";
-import { Button } from "../components/ui/form/Button";
+import { Button } from "../components/ui/form/Button/Button";
 import LangSelect from "../components/features/LangSelect/LangSelect";
 import H1 from "../components/ui/typography/H1";
 import H4 from "../components/ui/typography/H4";

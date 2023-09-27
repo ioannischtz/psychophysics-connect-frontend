@@ -12,7 +12,7 @@ import {
 } from "../../ui/form/Form";
 import { Input } from "../../ui/form/Input";
 import { ButtonGroup, ButtonGroupItem } from "../../ui/form/ButtonGroup";
-import { Button } from "../../ui/form/Button";
+import { Button } from "../../ui/form/Button/Button";
 import { useLanguage } from "../../../lib/contexts/language-provider";
 import signupPageText from "../../../constants/signup-page-text.json";
 import Muted from "../../ui/typography/Muted";
