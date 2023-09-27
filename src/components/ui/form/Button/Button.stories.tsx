@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
+import { BadgeHelp } from "lucide-react";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -16,4 +17,20 @@ export const Default: Story = {
       Default
     </Button>
   ),
+};
+
+export const Playground: Story = {
+  args: {
+    variant: "success",
+    size: "lg",
+    children: "Button",
+  },
+};
+
+export const IconButton: Story = {
+  args: {
+    variant: "success",
+    size: "icon",
+    children: <BadgeHelp />,
+  },
 };
