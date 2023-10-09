@@ -37,7 +37,10 @@ const withThemeProvider = (Story: Story, context: StoryContext) => {
     console.log(storybook_theme);
   }, [context.globals.theme]);
   return (
-    <ThemeProvider defaultTheme={theme} key={JSON.stringify(storybook_theme)}>
+    <ThemeProvider
+      defaultTheme={storybook_theme}
+      key={JSON.stringify(storybook_theme)}
+    >
       <Story />
     </ThemeProvider>
   );
