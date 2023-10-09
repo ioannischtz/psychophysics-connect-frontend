@@ -9,9 +9,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "../../ui/form/Form";
-import { Input } from "../../ui/form/Input";
-import { ButtonGroup, ButtonGroupItem } from "../../ui/form/ButtonGroup";
+} from "../../ui/form/Form/Form";
+import { Input } from "../../ui/form/Input/Input";
+import {
+  ButtonGroup,
+  ButtonGroupItem,
+} from "../../ui/form/ButtonGroup/ButtonGroup";
 import { Button } from "../../ui/form/Button/Button";
 import { useLanguage } from "../../../lib/contexts/language-provider";
 import signupPageText from "../../../constants/signup-page-text.json";
@@ -155,7 +158,12 @@ function SignupForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" variant="success" size="xl" className="w-full">
+          <Button
+            type="submit"
+            colorScheme="success"
+            size="xl"
+            className="w-full"
+          >
             {language === "EN"
               ? signupPageText.form.submit.en
               : signupPageText.form.submit.gr}
@@ -168,13 +176,13 @@ function SignupForm() {
             ? signupPageText.form["prompt"].en
             : signupPageText.form["prompt"].gr}
         </Muted>
-        <Button variant="link" size="sm">
-          <Link to="/auth/login" className="text-sm font-bold text-success">
+        <Link to="/auth/login" className="text-sm font-bold text-success">
+          <Button variant="link" size="sm">
             {language === "EN"
               ? signupPageText.form["prompt-action"].en
               : signupPageText.form["prompt-action"].gr}
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </>
   );

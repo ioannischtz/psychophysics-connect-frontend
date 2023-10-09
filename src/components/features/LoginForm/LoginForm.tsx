@@ -8,8 +8,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "../../ui/form/Form";
-import { Input } from "../../ui/form/Input";
+} from "../../ui/form/Form/Form";
+import { Input } from "../../ui/form/Input/Input";
 
 import loginPageText from "../../../constants/login-page-text.json";
 import signupPageText from "../../../constants/signup-page-text.json";
@@ -84,7 +84,12 @@ function LoginForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" variant="success" size="xl" className="w-full">
+          <Button
+            type="submit"
+            colorScheme="success"
+            size="xl"
+            className="w-full"
+          >
             {language === "EN"
               ? loginPageText.form["sumbit-text"].en
               : loginPageText.form["sumbit-text"].gr}
@@ -97,13 +102,13 @@ function LoginForm() {
             ? loginPageText.form["prompt"].en
             : loginPageText.form["prompt"].gr}
         </Muted>
-        <Button variant="link" size="sm">
-          <Link to="/auth/signup" className="text-sm font-bold text-success">
+        <Link to="/auth/signup" className="text-sm font-bold text-success">
+          <Button variant="link" size="sm">
             {language === "EN"
               ? loginPageText.form["prompt-action"].en
               : loginPageText.form["prompt-action"].gr}
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </>
   );

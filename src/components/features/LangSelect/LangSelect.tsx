@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../ui/form/Select";
+} from "../../ui/form/Select/Select";
 
 function LangSelect() {
   const { language, setLanguage } = useLanguage();

@@ -57,16 +57,17 @@ function Landing() {
           </>
         }
         actionButton={
-          <Button
-            variant="outline"
-            className="text-base text-success border-2 border-success hover:bg-success hover:text-success-foreground"
-          >
-            <Link to="/auth/signup">
+          <Link to="/auth/signup">
+            <Button
+              variant="outline"
+              colorScheme="success"
+              className="text-base"
+            >
               {language === "EN"
                 ? landingPageText["action-btn"].en
                 : landingPageText["action-btn"].gr}
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         }
       />
       <main className="my-12 md:my-32 flex flex-col justify-between space-y-24 font-roboto w-full">
@@ -400,17 +401,16 @@ function Landing() {
                     ? landingPageText["how-it-works-4-2"].p.en
                     : landingPageText["how-it-works-4-2"].p.gr}
                 </P>
-                <Button
-                  variant="success"
-                  size="xl"
+                <Link
+                  to="/auth/signup"
                   className="col-span-6 md:col-span-1 col-start-1 md:col-start-5 row-start-2 md:row-start-2 my-16 md:my-8"
                 >
-                  <Link to="/auth/signup">
+                  <Button colorScheme="success" size="xl">
                     {language === "EN"
                       ? landingPageText["action-btn"].en
                       : landingPageText["action-btn"].gr}
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

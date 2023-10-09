@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
-import { Toggle } from "../form/Toggle";
+import { Toggle } from "../form/Toggle/Toggle";
 import { MenuIcon } from "lucide-react";
 import {
   Dialog,

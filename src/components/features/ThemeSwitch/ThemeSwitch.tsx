@@ -1,6 +1,6 @@
 import { Moon, Sun } from "lucide-react";
-import { Switch } from "../../ui/form/Switch";
-import { useTheme } from "../../../lib/contexts/theme-provider";
+import { Switch } from "../../ui/form/Switch/Switch";
+import { useTheme } from "../../../lib/hooks/useTheme";
 
 function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
