@@ -2,9 +2,9 @@ import type { Preview, Story, StoryContext } from "@storybook/react";
 import { forceReRender } from "@storybook/react";
 import React from "react";
 import "../src/index.css";
-import { ThemeProvider } from "../src/lib/contexts/theme-provider";
-import { useTheme } from "../src/lib/hooks/useTheme";
 import { useEffect } from "react";
+import { useTheme } from "../src/components/features/ThemeSwitch/useTheme";
+import { ThemeProvider } from "../src/components/features/ThemeSwitch/theme-provider";
 
 const MyThemes = { light: "light", dark: "dark", system: "system" } as const;
 type Theme = (typeof MyThemes)[keyof typeof MyThemes];
@@ -25,7 +25,7 @@ const withThemeProvider = (Story: Story, context: StoryContext) => {
 
     if (storybook_theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
+          .matches
         ? "dark"
         : "light";
 

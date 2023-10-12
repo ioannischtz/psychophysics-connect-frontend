@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppBar from "../components/ui/navigation/AppBar";
+import AppBar from "../components/ui/navigation/AppBar/AppBar";
 import InpageNav from "../components/features/InpageNav/InpageNav";
 import Logo from "../components/features/Logo/Logo";
 import ThemeSwitch from "../components/features/ThemeSwitch/ThemeSwitch";
@@ -13,10 +13,10 @@ import { ReactComponent as SharedGoalsSVG } from "../assets/undraw_shared_goals_
 import { ReactComponent as OnboardingSVG } from "../assets/undraw_onboarding_re_6osc.svg";
 import { ReactComponent as ScientistSVG } from "../assets/undraw_scientist_ft0o(1).svg";
 import BulletList from "../components/ui/typography/BulletList";
-import { useLanguage } from "../lib/contexts/language-provider";
 import landingPageText from "../constants/landing-page-text.json";
 import { useScrollToHash } from "../lib/hooks/useScrollToHash";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../components/features/LangSelect/useLanguage";
 
 function Landing() {
   const { language } = useLanguage();

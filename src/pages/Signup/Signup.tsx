@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppBar from "../../components/ui/navigation/AppBar";
+import AppBar from "../../components/ui/navigation/AppBar/AppBar";
 import LangSelect from "../../components/features/LangSelect/LangSelect";
 import Logo from "../../components/features/Logo/Logo";
 import ThemeSwitch from "../../components/features/ThemeSwitch/ThemeSwitch";
@@ -7,9 +7,9 @@ import ThemeSwitch from "../../components/features/ThemeSwitch/ThemeSwitch";
 import { ReactComponent as SignupSVG } from "../../assets/undraw_sign_up_n6im(1).svg";
 import SignupForm from "../../components/features/SignupForm/SignupForm";
 import H1 from "../../components/ui/typography/H1";
-import { useLanguage } from "../../lib/contexts/language-provider";
 import signupPageText from "../../constants/signup-page-text.json";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../components/features/LangSelect/useLanguage";
 
 function Signup() {
   const { language } = useLanguage();

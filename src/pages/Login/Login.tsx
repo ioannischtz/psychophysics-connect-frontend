@@ -1,14 +1,14 @@
 /// <reference types="vite-plugin-svgr/client" />
-import AppBar from "../../components/ui/navigation/AppBar";
+import AppBar from "../../components/ui/navigation/AppBar/AppBar";
 import LangSelect from "../../components/features/LangSelect/LangSelect";
 import Logo from "../../components/features/Logo/Logo";
 import ThemeSwitch from "../../components/features/ThemeSwitch/ThemeSwitch";
-import { useLanguage } from "../../lib/contexts/language-provider";
 import H1 from "../../components/ui/typography/H1";
 import loginPageText from "../../constants/login-page-text.json";
 import { ReactComponent as LoginSVG } from "../../assets/undraw_login_re_4vu2.svg";
 import LoginForm from "../../components/features/LoginForm/LoginForm";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../components/features/LangSelect/useLanguage";
 
 function Login() {
   const { language } = useLanguage();
