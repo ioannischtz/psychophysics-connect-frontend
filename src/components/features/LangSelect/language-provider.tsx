@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 type Language = "EN" | "GR";
 
@@ -18,7 +18,7 @@ const initialState: LanguageProviderState = {
   setLanguage: () => null,
 };
 
-const LanguageProviderContext = createContext<LanguageProviderState>(
+export const LanguageProviderContext = createContext<LanguageProviderState>(
   initialState,
 );
 
@@ -50,12 +50,4 @@ export function LanguageProvider({
   );
 }
 
-export const useLanguage = () => {
-  const context = useContext(LanguageProviderContext);
 
-  if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-
-  return context;
-};

@@ -1,4 +1,4 @@
-import { useTheme } from "../../../lib/hooks/useTheme";
+import { useTheme } from "../ThemeSwitch/useTheme";
 import { Separator } from "../../ui/data_display/Separator/Separator";
 import OrigamiBrain from "./OrigamiBrain";
 
@@ -6,10 +6,11 @@ function Logo() {
   const { theme } = useTheme();
   return (
     <div
-      className={`${theme === "dark"
+      className={`${
+        theme === "dark"
           ? " text-foreground bg-background  backdrop-filter backdrop-blur-lg"
           : ""
-        } md:py-2 md:px-4 rounded flex w-fit items-center space-x-2`}
+      } md:py-2 md:px-4 rounded flex w-fit items-center space-x-2`}
     >
       <OrigamiBrain
         width="40"
