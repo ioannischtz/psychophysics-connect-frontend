@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTrigger,
-} from "../../overlays/Dialog";
+} from "../../overlays/Dialog/Dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
 
 interface AppBarProps {
