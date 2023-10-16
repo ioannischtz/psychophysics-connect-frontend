@@ -16,10 +16,10 @@ import {
   ButtonGroupItem,
 } from "../../ui/form/ButtonGroup/ButtonGroup";
 import { Button } from "../../ui/form/Button/Button";
-import { useLanguage } from "../../../lib/contexts/language-provider";
 import signupPageText from "../../../constants/signup-page-text.json";
 import Muted from "../../ui/typography/Muted";
 import { Link, useSubmit } from "react-router-dom";
+import { useLanguage } from "../LangSelect/useLanguage";
 
 const signupFormSchema = z.object({
   username: z.string().min(2, {

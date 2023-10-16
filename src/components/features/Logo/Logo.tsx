@@ -10,7 +10,7 @@ function Logo() {
         theme === "dark"
           ? " text-foreground bg-background  backdrop-filter backdrop-blur-lg"
           : ""
-      } md:py-2 md:px-4 rounded flex w-fit items-center space-x-2`}
+      } md:py-2 md:pr-4 rounded flex w-fit items-center space-x-2`}
     >
       <OrigamiBrain
         width="40"

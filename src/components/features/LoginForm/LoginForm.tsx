@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useLanguage } from "../../../lib/contexts/language-provider";
 import {
   Form,
   FormControl,
@@ -16,6 +15,7 @@ import signupPageText from "../../../constants/signup-page-text.json";
 import { Button } from "../../ui/form/Button/Button";
 import Muted from "../../ui/typography/Muted";
 import { Link, useSubmit } from "react-router-dom";
+import { useLanguage } from "../LangSelect/useLanguage";
 
 const loginFormSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),

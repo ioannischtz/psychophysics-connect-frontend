@@ -12,7 +12,7 @@ import Login from "./pages/Login/Login";
 import { action as loginAction } from "./pages/Login/action";
 import Signup from "./pages/Signup/Signup";
 import { action as signupAction } from "./pages/Signup/action";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard";
 import { LanguageProvider } from "./components/features/LangSelect/language-provider";
 

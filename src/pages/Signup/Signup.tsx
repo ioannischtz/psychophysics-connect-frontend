@@ -4,7 +4,7 @@ import LangSelect from "../../components/features/LangSelect/LangSelect";
 import Logo from "../../components/features/Logo/Logo";
 import ThemeSwitch from "../../components/features/ThemeSwitch/ThemeSwitch";
 
-import { ReactComponent as SignupSVG } from "../../assets/undraw_sign_up_n6im(1).svg";
+import SignupSVG from "../../assets/undraw_sign_up_n6im(1).svg?react";
 import SignupForm from "../../components/features/SignupForm/SignupForm";
 import H1 from "../../components/ui/typography/H1";
 import signupPageText from "../../constants/signup-page-text.json";

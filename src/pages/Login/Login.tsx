@@ -5,7 +5,7 @@ import Logo from "../../components/features/Logo/Logo";
 import ThemeSwitch from "../../components/features/ThemeSwitch/ThemeSwitch";
 import H1 from "../../components/ui/typography/H1";
 import loginPageText from "../../constants/login-page-text.json";
-import { ReactComponent as LoginSVG } from "../../assets/undraw_login_re_4vu2.svg";
+import LoginSVG from "../../assets/undraw_login_re_4vu2.svg?react";
 import LoginForm from "../../components/features/LoginForm/LoginForm";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../components/features/LangSelect/useLanguage";

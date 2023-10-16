@@ -9,9 +9,9 @@ import H1 from "../components/ui/typography/H1";
 import H4 from "../components/ui/typography/H4";
 import P from "../components/ui/typography/P";
 
-import { ReactComponent as SharedGoalsSVG } from "../assets/undraw_shared_goals_re_jvqd.svg";
-import { ReactComponent as OnboardingSVG } from "../assets/undraw_onboarding_re_6osc.svg";
-import { ReactComponent as ScientistSVG } from "../assets/undraw_scientist_ft0o(1).svg";
+import SharedGoalsSVG from "../assets/undraw_shared_goals_re_jvqd.svg?react";
+import OnboardingSVG from "../assets/undraw_onboarding_re_6osc.svg?react";
+import ScientistSVG from "../assets/undraw_scientist_ft0o(1).svg?react";
 import BulletList from "../components/ui/typography/BulletList";
 import landingPageText from "../constants/landing-page-text.json";
 import { useScrollToHash } from "../lib/hooks/useScrollToHash";
