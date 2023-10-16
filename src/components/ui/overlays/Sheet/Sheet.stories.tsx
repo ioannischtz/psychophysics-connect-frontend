@@ -45,7 +45,7 @@ type SheetSide = (typeof SHEET_SIDES)[number];
 
 export const WithSide: Story = {
   render: () => (
-    <div className="grid grid-cols-2 gap-2 w-1/4">
+    <div className="grid grid-cols-2 gap-2 ">
       {SHEET_SIDES.map((side: SheetSide) => (
         <Sheet key={side}>
           <SheetTrigger asChild>

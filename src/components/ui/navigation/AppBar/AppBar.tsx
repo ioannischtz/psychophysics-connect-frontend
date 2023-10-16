@@ -10,13 +10,20 @@ import {
 import { DialogClose } from "@radix-ui/react-dialog";
 
 interface AppBarProps {
-  logo: ReactNode;
+  logo?: ReactNode;
   nav?: ReactNode;
   settings?: ReactNode;
+  accountBanner?: ReactNode;
   actionButton?: ReactNode;
 }
 
-function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
+function AppBar({
+  logo,
+  nav,
+  settings,
+  accountBanner,
+  actionButton,
+}: AppBarProps) {
   const [isStickied, setIsStickied] = useState(false);
 
   useEffect(() => {
@@ -37,7 +44,7 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
 
   return (
     <header
-      className={`flex justify-between items-center px-2 py-4 w-full sticky top-0 z-10 bg-background/70 backdrop-filter backdrop-blur-lg  firefox:bg-opacity-70 ${
+      className={`flex justify-between items-center py-4 w-full sticky top-0 z-10 bg-background/70 backdrop-filter backdrop-blur-lg  firefox:bg-opacity-70 ${
         isStickied
           ? "border-b border-border md:fixed md:w-screen md:-ml-32 md:px-32"
           : ""
@@ -49,6 +56,7 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
       </div>
       <div className="hidden md:flex md:items-center space-x-4">
         {settings}
+        {accountBanner}
         {actionButton}
       </div>
 
@@ -61,11 +69,15 @@ function AppBar({ logo, nav, settings, actionButton }: AppBarProps) {
         </DialogTrigger>
         <DialogContent className="sm:min-h-[calc(100vh-2rem)] sm:max-w-[425px]">
           <DialogHeader>
-            <div className="flex items-center space-x-4 h-fit py-4">
-              {settings}
+            <div className="flex items-center justify-between h-fit py-4">
+              <div className="flex items-center space-x-2">{settings}</div>
+              {accountBanner}
             </div>
           </DialogHeader>
-          <DialogClose className="">{nav}</DialogClose>
+          <DialogClose className="">
+            {nav}
+            <div className="pt-2">{actionButton}</div>
+          </DialogClose>
         </DialogContent>
       </Dialog>
     </header>

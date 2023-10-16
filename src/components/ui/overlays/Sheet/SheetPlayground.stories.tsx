@@ -23,7 +23,7 @@ type PlayableSheetProps = {
 };
 
 const PlayableSheet = ({ side }: PlayableSheetProps) => (
-  <div className="grid grid-cols-2 gap-2 w-1/4">
+  <div className="grid grid-cols-2 gap-2 ">
     <Sheet key={side}>
       <SheetTrigger asChild>
         <Button variant="outline">{side}</Button>
@@ -61,6 +61,9 @@ const PlayableSheet = ({ side }: PlayableSheetProps) => (
 
 const meta: Meta<typeof PlayableSheet> = {
   component: PlayableSheet,
+  // parameters: {
+  //   layout: "padded",
+  // },
 };
 
 export default meta;

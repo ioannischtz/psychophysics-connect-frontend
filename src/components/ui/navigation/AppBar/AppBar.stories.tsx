@@ -6,6 +6,9 @@ import { Button } from "../../form/Button/Button";
 
 const meta: Meta<typeof AppBar> = {
   component: AppBar,
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export default meta;
